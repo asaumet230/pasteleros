@@ -1,0 +1,461 @@
+@font-face {
+    font-family: "League Spartan Bold";
+    src: url("fonts/LeagueSpartan-Bold.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Einstel lung Bold";
+    src: url("fonts/NeueEinstellung-Medium.otf");
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "Neue Einstel lung";
+    src: url("fonts/NeueEinstellung-Normal.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "XXII Centar";
+    src: url("XXIICentar-Light.ttf");
+    font-weight: lighter;
+    font-style: lighter;
+}
+
+:root {
+    --clr-1: rgb(33,38,58);
+    --clr-2: #9fafb0;
+    --clr-3: #7a8282;
+    --clr-4: #999797;
+    --clr-5: #696969;
+    --main-color:#21263a;
+  }
+
+html {
+    box-sizing: border-box;
+}
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+}
+  
+  * {
+    padding: 0px;
+    margin: 0px;
+}
+
+img {
+    width: 100%;
+}
+  
+.main-section {
+    margin: 0px auto;
+    background: rgb(33,38,58);
+    background: linear-gradient(180deg, #21263a 0%, rgba(20,18,18,1) 40%, rgba(33,38,58,1) 100%);
+}
+
+.main-section-resume-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    margin: 0px auto;
+    padding: 70px 40px 0px 40px;
+}
+
+.main-section-resume {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-section-content-container {
+    font-family: "League Spartan Bold";
+    margin: 60px 0px;
+}
+
+.main-section-logo {
+    width: 410px;
+    height: 102px;
+}
+
+.main-section-title {
+    color: #B98962;
+    font-size: 32px;
+}
+
+.main-section-paragraph {
+    font-family: "Neue Einstel lung";
+    margin-top: 30px;
+    font-size: 16px;
+    color: white;
+}
+
+.main-section-span {
+    font-family: "Neue Einstel lung Bold";
+    color:#B98962; 
+}
+
+.main-section-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.main-section-image {
+    height: 380px;
+    width: 380px;
+}
+
+.main-section-video-container {
+    padding-bottom: 50px;
+}
+
+.main-section-video {
+    display: block;
+    margin: 150px auto;
+    width: 100%;
+    height: calc(.5625 * 60vw); 
+    max-width: 1280px; 
+    max-height: 720px; 
+    min-width: 360px; 
+    min-height: 250px;
+    border-radius: 15px;
+}
+
+.border {
+    aspect-ratio: 19 / 12;
+    max-width: 1280px; 
+    max-height: 720px; 
+    min-width: 360px; 
+    min-height: 250px;
+    height: calc(.5625 * 60vw); 
+    margin: 70px auto;
+    background: var(--clr-1);
+    border-radius: 15px;
+    position: relative;
+    z-index: 99;
+  }
+  
+  .border::before,
+  .border::after {
+    content: "";
+    position: absolute;
+    inset: -0.1rem;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-4),
+      var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 2s ease-in-out infinite;
+  }
+  
+  .border::after {
+    filter: blur(0.5rem);
+  }
+
+  .btn-landing-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-landing {
+    cursor: pointer;
+    padding: 18px 20px;
+    background-color:#B98962; 
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: "League Spartan Bold";
+    text-transform: uppercase;
+    color: var(--main-color);
+    text-decoration: none;
+  }
+
+  .btn-landing:hover {
+    background-color:#d8aa81; 
+  }
+
+  .call-to-action {
+    font-size: 20px;
+    font-family: "League Spartan Bold";
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+  }
+  
+  @keyframes rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    50% {
+      --gradient-angle: 90deg;
+    }
+    100% {
+      --gradient-angle: 190deg;
+    }
+  }
+
+/** SECTION TWO */
+
+.second-section {
+    background-color: white;
+    padding: 70px;
+    margin: 50px 0px;
+}
+
+.second-section-content, .second-section-sub-content {
+    text-align: center;
+    font-family: "Neue Einstel lung Bold";
+    font-size: 22px;
+    color: #21263a;
+}
+
+.second-section-sub-content {
+    font-family: "League Spartan Bold";
+    line-height: 2;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/** THIRD SECTION **/
+
+.third-section-container {
+    display: block;
+}
+
+.third-section {
+    background-image: url('/images/section-3-background.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.third-section::after {
+   content: '';
+   background-color: rgba(33, 38, 58, .85) ;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+.third-section-content {
+    width: 97%;
+    height: 97%;
+    border: 2.5px solid #B98962;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-section-title {
+    font-size: 80px;
+    font-family: "Neue Einstel lung";
+    color: white;
+    letter-spacing: 2px;
+}
+
+.third-section-content-one, .third-section-second-content, .third-section-third-content  {
+    font-size: 60px;
+    font-family: "Neue Einstel lung Bold";
+    letter-spacing: 2px;
+    color: #B98962;
+}
+
+.third-section-second-content {
+    font-size: 36px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.third-section-third-content {
+    margin-top: 30px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.section-3-logo {
+    width: 350px;
+}
+
+/** FOURTH SECTION **/
+
+.fourth-section-container {
+    padding: 70px 20px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.fourth-section-content-one, .fourth-section-content-two {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fourth-section-content-two {
+    width: 70%;
+    margin: 30px auto 70px auto;
+}
+
+.card {
+    border: 1px solid #c1c1c1e2;
+    width: 330px;
+    height: 240px;
+    margin: 10px 10px;
+}
+
+.card-title {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #B98962;
+    font-family: "League Spartan Bold";
+    background-color: #21263a;
+}
+
+.card-content {
+    padding: 15px 20px;
+    font-family: "Neue Einstel lung";
+}
+
+/** FIVE SECTION **/
+
+.five-section-container {
+    padding: 70px 20px;
+    margin: 0px auto;
+    background: rgb(33,38,58);
+    background: linear-gradient(180deg, #21263a 0%, #21263a 50%, #141723  100% );
+}
+
+.five-seciton-title {
+    color: #B98962;
+    font-family: "League Spartan Bold";
+    text-align: center;
+    font-size: 40px;
+    max-width: 49%;
+    letter-spacing: 2px;
+    margin: 30px auto 50px auto;
+}
+
+.five-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media( max-width: 920px ) {
+
+    .main-section-resume-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center; 
+        justify-content: center; 
+        margin: 0px auto;
+        padding: 70px 0px;
+    }
+
+    .main-section-resume {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-section-video {
+       margin-top: -150px;
+    }
+
+    .main-section-image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .btn-landing {
+        font-size: 16px;
+        padding: 15px 20px;
+      }
+    
+    .call-to-action {
+        font-size: 16px;
+      }
+
+    /** THIRD SECTION **/
+
+    .third-section {
+        height: 600px;
+    }
+
+    .third-section-title {
+        font-size: 44px;
+    }
+
+    .third-section-content-one {
+        font-size: 34px;
+    }
+
+    .third-section-second-content {
+        font-size: 20px;
+    }
+
+    .section-3-logo {
+        width: 260px;
+        margin: 30px 0px;
+    }
+
+    .third-section-third-content {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    /** FOURTH SECTION **/
+
+    .fourth-section-container {
+        padding: 50px 20px;
+    }
+
+    .fourth-section-content-two {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        margin-bottom: 20px ;
+    }
+
+    .first-card{
+        margin-top: 0px;
+    }
+
+    .last-card {
+        margin-bottom: 0px;
+    }
+}
