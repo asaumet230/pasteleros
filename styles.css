@@ -235,7 +235,7 @@ img {
 }
 
 .third-section {
-    background-image: url('/images/section-3-background.webp');
+    background-image: url('images/section-3-background.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
