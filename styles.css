@@ -769,8 +769,11 @@ img {
         padding: 0px 20px;
     }
 
-    .main-section-image {
+    .main-section-image-container{
         margin-top: 40px;
+    }
+
+    .main-section-image {
         height: 300px;
         width: 300px;
     }
