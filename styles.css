@@ -300,7 +300,6 @@ img {
 }
 
 /** FOURTH SECTION **/
-
 .fourth-section-container {
     padding: 70px 20px;
     margin: 0 auto;
@@ -356,18 +355,266 @@ img {
     color: #B98962;
     font-family: "League Spartan Bold";
     text-align: center;
-    font-size: 40px;
-    max-width: 49%;
+    font-size: 50px;
+    max-width: 60%;
     letter-spacing: 2px;
-    margin: 30px auto 50px auto;
+    margin: 30px auto 80px auto;
 }
 
 .five-card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
-    width: 90%;
+    width: 80%;
+    margin: 0 auto 80px auto;
+}
+
+.five-card-title {
+    padding: 15px 20px 10px 20px;
+    color:#21263a;
+    background-color: #B98962;
+    font-family: "League Spartan Bold";
+    letter-spacing: 2px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.five-card-content {
+    color: white;
+    font-family: "Neue Einstel lung";
+    line-height: 1.5;
+}
+
+/** SIX SECTION **/
+
+.six-section-container {
+    max-width: 80%;
     margin: 0 auto;
+    padding: 70px 20px;
+}
+
+.six-section-title {
+    font-family: "League Spartan Bold";
+    color: #21263a;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.six-section-list li{
+    color:#21263a;
+    font-family: "Neue Einstel lung bold";
+    margin-bottom: 10px;
+    margin-left: 10px;
+} 
+
+.six-section-list li::marker{
+    color: #B98962;
+    font-size: 25px;
+} 
+
+.six-section-content {
+    font-family: "Neue Einstel lung bold";
+    margin: 20px 0px;
+    max-width: 60%;
+    color: #21263a;
+}
+
+.six-section-advise {
+    font-family: "Neue Einstel lung";
+    font-size: 14px; 
+    color: #21263a;
+}
+
+/** SEVEN SECTION **/
+.seven-section {
+    background: rgb(33,38,58);
+    background: linear-gradient(180deg, #21263a 0%, #21263a 50%, #141723  100% );
+}
+
+.seven-section-conatiner {
+    max-width: 90%;
+    margin: 0px  auto;
+    padding: 60px 0px;
+}
+
+.seven-section-title {
+    font-family: "League Spartan Bold";
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.seven-section-videos-conatiner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.seven-section-video-container {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.seven-section-video {
+    height: 250px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.border-seven-video {
+    height: 250px;
+    width: 100%;
+    background: var(--clr-1);
+    border-radius: 15px;
+    position: relative;
+    z-index: 99;
+}
+  
+.border-seven-video::before,
+.border-seven-video::after {
+    content: "";
+    position: absolute;
+    inset: -0.1rem;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-3),
+        var(--clr-4),
+        var(--clr-5),
+        var(--clr-4),
+        var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 2s ease-in-out infinite;
+}
+
+.border-seven-video::after {
+    filter: blur(0.5rem);
+}
+
+.videos-spacer {
+    margin-top: 30px;
+}
+
+/** PROFILE **/
+.profile-container {
+    max-width: 70%;
+    margin: 50px auto;
+    border: 1px solid #B98962;
+    padding-top: 70px;
+    padding-left: 60px;
+}
+
+.profile-content-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile-image-desktop{
+    height: 550px;
+    width: 484px;
+    margin-bottom: -2.5px;
+}
+
+.profile-image-movil {
+    display: none;
+}
+
+.profile-title {
+   margin-bottom: 50px;
+}
+
+.profile-content {
+    color: white;
+    font-family: "Neue Einstel lung";
+    margin-bottom: 30px;
+    letter-spacing: 1.2px;
+}
+
+.profile-span {
+    color: #B98962;
+}
+
+/** SOCIAL-MEDIA **/
+.social-media {
+    width: 90%;
+    margin: 0px auto;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.social-media-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-footer {
+    width: 250px;
+}
+
+.hordeando-container {
+    height: 60px;
+    width: 1px;
+    color: white;
+}
+
+.social-media-link {
+    text-decoration: none;
+    font-family: "Neue Einstel lung";
+    color: white;
+    margin: 0px 20px;
+    transition: all 300ms ease-in-out;
+}
+
+.social-media-link:hover {
+    color:#B98962;
+}
+
+@media( max-width: 1200px ) {
+
+    .profile-container {
+        max-width: 70%;
+        margin: 50px auto;
+        padding: 0px;
+    }
+    
+    .profile-content-container {
+       flex-direction: column;
+    }
+    
+    #profile-content {
+       padding: 30px;
+    }
+
+    .profile-image-desktop{
+        display: none;
+    }
+    
+    .profile-image-movil {
+        display: block;
+    }
+
+    .profile-title-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .profile-title {
+        max-width: 400px;
+    }
+
+    .social-media  {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media( max-width: 920px ) {
@@ -448,6 +695,7 @@ img {
     }
 
     .card {
+        height: 280px;
         margin-bottom: 20px ;
     }
 
@@ -457,5 +705,132 @@ img {
 
     .last-card {
         margin-bottom: 0px;
+    }
+
+    /** FIVE SECTION **/
+    .five-section-container  {
+        padding: 30px 0px;
+    }
+
+    .five-seciton-title {
+        font-size: 24px;
+        margin: 30px auto 50px auto;
+        max-width: 90%;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .five-card-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .five-card-title {
+        font-size: 18px;
+        letter-spacing: 1px;
+        padding: 10px;
+    }
+
+    .five-card-content {
+        margin-bottom: 20px;
+    }
+
+    /** SIX SECTION **/
+    .six-section-title {
+        font-family: "League Spartan Bold";
+        color: #21263a;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .six-section-content {
+        max-width: 100%;
+    }
+
+    /** SEVEN SECTION **/
+    .seven-section-videos-conatiner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .videos-spacer {
+        margin-top: 0px;
+    }
+}
+
+@media( max-width: 620px ) {
+
+    /** FIRST SECTION **/
+    .main-section-resume-container {
+        padding: 0px 20px;
+    }
+
+    .main-section-image {
+        height: 300px;
+        width: 300px;
+    }
+
+    .main-section-logo {
+        width: 300px;
+        height: 75px;
+    }
+
+    .main-section-title {
+        font-size: 28px;
+    }
+
+    .main-section-video {
+        display: block;
+        margin: -40px auto;
+        width: 80%;
+        height: calc(.5625 * 60vw); 
+        min-width: 300px; 
+        min-height: 250px;
+        border-radius: 15px;
+    }
+
+    .border {
+        width: 40%;
+        min-width: 300px; 
+        min-height: 250px;
+    }
+
+    /** SEVEN SECTION **/
+    .seven-section-videos-conatiner {
+        display: block;
+    }
+
+    .videos-spacer {
+        margin-top: 0px;
+    }
+    
+    .profile-content {
+        font-size: 14px;
+    }
+    
+    #profile-content {
+        padding: 20px;
+    }
+
+    .logo-footer {
+        width: 150px;
+    }
+
+    .social-media-link {
+        font-size: 12px;
+        margin: 0px 10px;
+        transition: all 300ms ease-in-out;
+    }
+
+    .social-media-logo-container {
+        margin-top: 20px;
+    }
+    
+    .hordeando-container {
+        height: 30px;
     }
 }
