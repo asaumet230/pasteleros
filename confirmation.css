@@ -1,0 +1,296 @@
+
+/** CONFIRMATION SECTION ONE **/
+.background-section {
+    background: rgb(33,38,58);
+    background: linear-gradient(180deg, #21263a 0%, rgba(20,18,18,1) 100%);
+    padding-bottom: 60px;
+}
+
+.section-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.confirmation-title-section-one {
+    text-align: center;
+    font-family: "Neue Einstel lung Bold";
+    color: #B98962;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+.confirmation-span-section-one {
+    text-align: center;
+    font-family: "League Spartan Bold";
+    color: #B98962;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+.confirmation-list-container {
+    width: 75%;
+    margin: 50px auto 80px auto;
+}
+
+.confirmation-list, .confirmation-order-list {
+    color: white;
+    font-family: "Neue Einstel lung";
+}
+
+.confirmation-list li {
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.confirmation-list li::marker {
+    color: #B98962;
+    font-size: 25px;
+}
+
+.confirmation-subtitle {
+    color: white;
+    font-family: "League Spartan Bold";
+    font-size: 34px;
+}
+
+.confirmation-order-list {
+    margin: 30px 0px 80px 0px;
+    padding-left: 10px;
+}
+
+.confirmation-order-list li {
+    margin-bottom: 10px;
+}
+
+.confirmation-order-list li::marker{
+    color: #B98962;
+    font-family: "League Spartan Bold";
+}
+
+/** CONFIRMATION SECTION TWO **/
+.confirmation-section-two-container {
+    margin: 50px auto;
+    width: 80%;
+}
+
+.confirmation-section-two-title {
+    font-size: 34px;
+    font-family: "League Spartan Bold";
+    color: #21263a;
+    margin-top: 100px;
+}
+
+.confirmation-section-two-order-list {
+    color: #21263a;
+    font-family: "Neue Einstel lung bold";
+    margin: 60px 0px 100px 0px;
+    padding-left: 10px;
+}
+
+.confirmation-section-two-order-list li {
+    margin-bottom: 20px;
+}
+
+.confirmation-section-two-order-list li::marker {
+    color: #B98962;
+    font-family: "League Spartan Bold";
+}
+
+.confirmation-section-two-order-list li a {
+    color: #B98962;
+    text-decoration: none;
+    font-family: "Neue Einstel lung";
+}
+
+/** TESTIMONIALS **/
+.testimonials-section {
+    margin-top: 150px;
+}
+
+.testimonials-container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    padding-bottom: 50px;
+}
+
+.testimonial-title {
+    color: white;
+    font-family: "League Spartan Bold";
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 36px;
+}
+
+.testimonial-card-container {
+    background: rgb(33,38,58);
+    background: linear-gradient(180deg, #21263a 0%,  #21263a 70%, rgba(20,18,18,1) 100%);
+}
+
+.card-testimonial-border {
+    aspect-ratio: 19 / 12;
+    margin: 10px auto;
+    background: var(--clr-1);
+    position: relative;
+    z-index: 99;
+  }
+  
+  .card-testimonial-border::before,
+  .card-testimonial-border::after {
+    content: "";
+    position: absolute;
+    inset: -0.1rem;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-4),
+      var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 2s ease-in-out infinite;
+  }
+  
+.card-testimonial-border::after {
+    filter: blur(0.2rem);
+}
+
+.testimonial-card-title {
+    font-family: "Neue Einstel lung bold";
+    background-color: #B98962;
+    color:#21263a;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    height: 70px;
+}
+
+.testimonial-card-subtitle {
+    font-size: 14px;
+}
+
+.testimonial-card-content {
+    color: white;
+    font-family: "Neue Einstel lung";
+    padding: 30px 20px;
+    line-height: 1.3;
+    text-align: center;
+    height: 380px;
+}
+
+.separator-section {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: "Neue Einstel lung";
+}
+
+.separator {
+    width: 60%;
+    height: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 1300px) { 
+
+    .testimonials-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+
+    .testimonial-card-content {
+        height: 350px;
+        padding: 10px;
+    }    
+}
+
+@media(max-width: 920px) {
+
+    .section-container {
+        padding: 60px 30px;
+    }
+    
+    .confirmation-title-section-one {
+        font-size: 40px;
+    }
+    
+    .confirmation-span-section-one {
+        font-size: 35px;
+    }
+
+    .confirmation-subtitle {
+        font-size: 28px;
+    }
+
+    .confirmation-section-two-title {
+        font-size: 30px;
+    }
+
+    .testimonial-title {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 620px) {
+
+    .section-container {
+        padding: 60px 10px;
+    }
+
+    .confirmation-title-section-one {
+        font-size: 28px;
+    }
+    
+    .confirmation-span-section-one {
+        font-size: 22px;
+    }
+
+    .confirmation-subtitle {
+        font-size: 18px;
+    }
+
+    .confirmation-section-two-title {
+        font-size: 22px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .confirmation-section-two-order-list {
+        color: #21263a;
+        font-family: "Neue Einstel lung bold";
+        margin: 30px 0px;
+        padding-left: 10px;
+    }
+
+    .testimonials-section {
+        margin-top: 50px;
+    }
+
+    .testimonials-container {
+        width: 80%;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .testimonial-title { 
+        font-size: 24px;
+    }
+
+    .testimonial-card-content {
+        height: 330px;
+        padding: 30px 20px;
+    }
+
+    .separator-section {
+        font-size: 18px;
+    }
+}

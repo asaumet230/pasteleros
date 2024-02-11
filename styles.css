@@ -441,7 +441,7 @@ img {
     font-family: "League Spartan Bold";
     color: white;
     text-align: center;
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 60px;
 }
 
@@ -649,7 +649,7 @@ img {
     .btn-landing {
         font-size: 16px;
         padding: 15px 20px;
-      }
+    }
     
     .call-to-action {
         font-size: 16px;
@@ -806,6 +806,11 @@ img {
     /** SEVEN SECTION **/
     .seven-section-videos-conatiner {
         display: block;
+    }
+
+    .seven-section-title {
+        font-size: 22px;
+        margin-bottom: 30px;
     }
 
     .videos-spacer {

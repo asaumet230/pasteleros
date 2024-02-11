@@ -1,0 +1,69 @@
+.success-container {
+    margin: 0 auto;
+    padding: 50px 0px;
+    background: rgb(33,38,58);
+    height: 100vh;
+}
+.success-title {
+    text-align: center;
+    font-family: "League Spartan Bold";
+    color: #B98962;
+    font-size: 46px;
+    letter-spacing: 3px;
+}
+
+.success-section-one {
+    background-color: #B98962;
+    text-align: center;
+    padding: 30px;
+    margin: 60px 0px;
+}
+
+.success-section-one-content {
+    font-family: "Neue Einstel lung bold";
+    color: white;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.content-ended {
+    margin-top: 40px;
+}
+
+.success-section-two {
+    text-align: center;
+    font-family: "Neue Einstel lung bold";
+    color: white;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.social-media-success-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+@media(max-width:620px) {
+    .success-title {
+        font-size: 32px;
+    }
+
+    .success-section-one-content {
+        font-size: 16px;
+    }
+
+    .success-section-two {
+        text-align: center;
+        font-family: "Neue Einstel lung bold";
+        color: white;
+        font-size: 14px;
+        margin: 50px 20px;
+    }
+    
+    
+}
