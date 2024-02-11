@@ -27,13 +27,8 @@
 }
 
 :root {
-    --clr-1: rgb(33,38,58);
-    --clr-2: #9fafb0;
-    --clr-3: #7a8282;
-    --clr-4: #999797;
-    --clr-5: #696969;
     --main-color:#21263a;
-  }
+}
 
 html {
     box-sizing: border-box;
@@ -113,63 +108,49 @@ img {
 }
 
 .main-section-video-container {
-    padding-bottom: 50px;
+    padding: 100px 20px;
 }
 
-.main-section-video {
-    display: block;
-    margin: 150px auto;
-    width: 100%;
-    height: calc(.5625 * 60vw); 
-    max-width: 1280px; 
-    max-height: 720px; 
-    min-width: 360px; 
-    min-height: 250px;
-    border-radius: 15px;
-}
-
-.border {
-    aspect-ratio: 19 / 12;
-    max-width: 1280px; 
-    max-height: 720px; 
-    min-width: 360px; 
-    min-height: 250px;
-    height: calc(.5625 * 60vw); 
-    margin: 70px auto;
-    background: var(--clr-1);
-    border-radius: 15px;
+.wrapper {
     position: relative;
-    z-index: 99;
-  }
-  
-  .border::before,
-  .border::after {
-    content: "";
-    position: absolute;
-    inset: -0.1rem;
-    z-index: -1;
-    background: conic-gradient(
-      from var(--gradient-angle),
-      var(--clr-3),
-      var(--clr-4),
-      var(--clr-5),
-      var(--clr-4),
-      var(--clr-3)
-    );
-    border-radius: inherit;
-    animation: rotation 2s ease-in-out infinite;
-  }
-  
-  .border::after {
-    filter: blur(0.5rem);
-  }
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 900px; 
+    margin: 0 auto 70px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    border: 1px solid #ccc;
+    animation: border-animation 2s infinite; 
+}
 
-  .btn-landing-container {
+.wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@keyframes border-animation {
+    0% {
+        border-color: #8d8c8c;
+    }
+    50% {
+        border-color: #cccaca;
+    }
+    100% {
+        border-color: #8d8c8c;
+    }
+}
+
+.btn-landing-container {
     display: flex;
     justify-content: center;
-  }
+}
 
-  .btn-landing {
+.btn-landing {
     cursor: pointer;
     padding: 18px 20px;
     background-color:#B98962; 
@@ -180,31 +161,19 @@ img {
     text-transform: uppercase;
     color: var(--main-color);
     text-decoration: none;
-  }
+}
 
-  .btn-landing:hover {
+.btn-landing:hover {
     background-color:#d8aa81; 
-  }
+}
 
-  .call-to-action {
+.call-to-action {
     font-size: 20px;
     font-family: "League Spartan Bold";
     text-align: center;
     color: white;
     margin-top: 30px;
-  }
-  
-  @keyframes rotation {
-    0% {
-      --gradient-angle: 0deg;
-    }
-    50% {
-      --gradient-angle: 90deg;
-    }
-    100% {
-      --gradient-angle: 190deg;
-    }
-  }
+}
 
 /** SECTION TWO */
 
@@ -258,8 +227,8 @@ img {
 }
 
 .third-section-content {
-    width: 97%;
-    height: 97%;
+    width: 100%;
+    height: 100%;
     border: 2.5px solid #B98962;
     z-index: 1;
     display: flex;
@@ -451,52 +420,10 @@ img {
 }
 
 .seven-section-video-container {
-    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px 20px;
-}
-
-.seven-section-video {
-    height: 250px;
-    width: 100%;
-    border-radius: 15px;
-}
-
-.border-seven-video {
-    height: 250px;
-    width: 100%;
-    background: var(--clr-1);
-    border-radius: 15px;
-    position: relative;
-    z-index: 99;
-}
-  
-.border-seven-video::before,
-.border-seven-video::after {
-    content: "";
-    position: absolute;
-    inset: -0.1rem;
-    z-index: -1;
-    background: conic-gradient(
-        from var(--gradient-angle),
-        var(--clr-3),
-        var(--clr-4),
-        var(--clr-5),
-        var(--clr-4),
-        var(--clr-3)
-    );
-    border-radius: inherit;
-    animation: rotation 2s ease-in-out infinite;
-}
-
-.border-seven-video::after {
-    filter: blur(0.5rem);
-}
-
-.videos-spacer {
-    margin-top: 30px;
 }
 
 /** PROFILE **/
@@ -645,6 +572,11 @@ img {
         align-items: center;
         margin-bottom: 50px;
     }
+
+    .main-section-video-container {
+        padding: 10px 30px 50px 30px;
+    }
+    
 
     .btn-landing {
         font-size: 16px;
@@ -797,10 +729,23 @@ img {
         border-radius: 15px;
     }
 
+    .wrapper {
+        margin-bottom: 40px;
+    }
+
     .border {
         width: 40%;
         min-width: 300px; 
         min-height: 250px;
+    }
+
+    .third-section {
+        padding: 30px 20px;
+    }
+
+    .five-card-title {
+        text-align: center;
+        font-size: 16px;
     }
 
     /** SEVEN SECTION **/
@@ -837,6 +782,12 @@ img {
 
     .social-media-logo-container {
         margin-top: 20px;
+    }
+
+    .profile-container {
+        max-width: 90%;
+        margin: 20px auto;
+        border: 1px solid #B98962;
     }
     
     .hordeando-container {

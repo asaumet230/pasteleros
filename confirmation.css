@@ -131,10 +131,10 @@
 }
 
 .card-testimonial-border {
-    aspect-ratio: 19 / 12;
     margin: 10px auto;
     background: var(--clr-1);
     position: relative;
+    border: 1px solid #929090;
     z-index: 99;
   }
   
@@ -144,21 +144,11 @@
     position: absolute;
     inset: -0.1rem;
     z-index: -1;
-    background: conic-gradient(
-      from var(--gradient-angle),
-      var(--clr-3),
-      var(--clr-4),
-      var(--clr-5),
-      var(--clr-4),
-      var(--clr-3)
-    );
-    border-radius: inherit;
-    animation: rotation 2s ease-in-out infinite;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    border: 1px solid #ccc;
+    animation: border-animation 2s infinite; 
   }
   
-.card-testimonial-border::after {
-    filter: blur(0.2rem);
-}
 
 .testimonial-card-title {
     font-family: "Neue Einstel lung bold";
@@ -209,7 +199,7 @@
 
     .testimonial-card-content {
         height: 350px;
-        padding: 10px;
+        padding: 30px 20px;
     }    
 }
 
@@ -238,11 +228,18 @@
     .testimonial-title {
         font-size: 30px;
     }
+
+    .testimonial-card-content {
+        height: 380px;
+        padding: 30px 20px;
+    }
+
 }
 
 @media(max-width: 620px) {
 
     .section-container {
+        width: 100%;
         padding: 60px 10px;
     }
 
@@ -286,7 +283,7 @@
     }
 
     .testimonial-card-content {
-        height: 330px;
+        height: 380px;
         padding: 30px 20px;
     }
 
